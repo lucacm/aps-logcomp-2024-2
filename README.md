@@ -17,6 +17,6 @@ O resultado é uma linguagem que vai além da tradução literal. Ela carrega um
 [Link da tradução da letra da música](https://www.letras.mus.br/stromae/ma-meilleure-ennemie-feat-pomme/traducao.html)
 
 #
-## [EBNF]()
+## [EBNF](https://github.com/lucacm/aps-logcomp-2024-2/blob/main/ebnf.md)
 
 ## [Exemplo de Código](https://github.com/lucacm/aps-logcomp-2024-2/blob/main/test.mme)
