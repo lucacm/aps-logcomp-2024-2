@@ -1,0 +1,181 @@
+/*linguagem Ma Meilleure Ennemie*/
+
+/*bloco refrain*/
+chanson teste_intro(): rien {
+    paroles verso prend "Je t’aime, je te hais, je t’aime, je te hais";
+
+    /* Repetição fixa com refrain */
+    refrain 4 {
+        affiche(verso);
+    }
+}
+
+/*testa choix, sinon si, mostra operadores personalizados e if-then (alors)*/
+chanson teste_couplet_1(): rien {
+    entier linha prend 0;
+
+    /* Repetição para alternar versos */
+    tant_que linha moins_que 8 {
+        choix (linha egal 0) alors {
+            affiche("T’es la meilleure chose qui m’est arrivée");
+        } sinon si (linha egal 1) alors {
+            affiche("Mais aussi la pire chose qui m’est arrivée");
+        } sinon si (linha egal 2) alors {
+            affiche("Ce jour où je t’ai rencontrée, j’aurais peut-être préféré");
+        } sinon si (linha egal 3) alors {
+            affiche("Que ce jour ne soit jamais arrivé (Arrivé)");
+        } sinon si (linha egal 4) alors {
+            affiche("La pire des bénédictions");
+        } sinon si (linha egal 5) alors {
+            affiche("La plus belle des malédictions");
+        } sinon si (linha egal 6) alors {
+            affiche("De toi, j’devrais m’éloigner");
+        } sinon {
+            affiche("Mais comme dit le dicton : 'Plutôt qu’être seul, mieux vaut être mal accompagné'");
+        }
+        linha prend linha ajoute 1;
+    }
+}
+
+/*testa o continue*/
+chanson teste_pre_refrain(): rien {
+    entier contador prend 0;
+
+    /* Repetição com uma estrofe incorreta que será ignorada */
+    tant_que contador moins_que 5 {
+        /* Escolha de estrofes */
+        choix (contador egal 0) alors {
+            affiche("Tu sais c’qu’on dit");
+        } sinon si (contador egal 1) alors {
+            affiche("Sois près d’tes amis les plus chers");
+        } sinon si (contador egal 2) alors {
+            /* Estrofe errada */
+            contador prend contador ajoute 1; /* Incrementa antes de pular */
+            je_taime; /* Pula para a próxima iteração */
+            affiche("Je promets que je n'oublierai jamais ça");
+        } sinon si (contador egal 3) alors {
+            affiche("Mais aussi");
+        } sinon {
+            affiche("Encore plus près d'tes adversaires");
+        }
+
+        /* Incrementa o contador */
+        contador prend contador ajoute 1;
+    }
+}
+
+/*testa sentiment (boolean), true e false (amour e haine)*/
+chanson teste_refrain(): rien {
+    sentiment ekko prend amour;
+    sentiment jinx prend haine;
+
+    choix (ekko) alors {
+        affiche("Mais ma meilleure ennemie, c’est toi");
+        affiche("Fuis-moi, le pire, c’est toi et moi");
+    } 
+    
+    choix (jinx) alors {
+        affiche("Toujours une danse avec toi");
+    } sinon {
+        affiche("Mais si tu cherches encore ma voix");
+        affiche("Oublie-moi, le pire, c’est toi et moi");
+    }   
+}
+
+
+/*testa as funções max min, operadores personalizados*/
+chanson teste_couplet_2(): rien {
+    entier maior prend meilleure(10, 15);
+    entier menor prend pire(5, 8);
+
+    /* Alternância de versos com max e min */
+    choix (maior superieur_a menor) alors {
+        affiche("Pourquoi ton prénom me blesse");
+        affiche("Quand il se cache juste là dans l’espace ?");
+    } 
+    choix (menor moins_que maior) alors {
+        affiche("C’est quelle émotion, la haine");
+        affiche("Ou la douceur, quand j’entends ton prénom ?");
+    }
+}
+
+/*testa o break*/
+chanson teste_pre_refrain_2(): rien {
+    entier contador prend 3; /* Contador inicial maior para decrementar */
+
+    /* Loop com decremento e um verso inexistente */
+    tant_que contador superieur_a 0 {
+
+        /* Versos normais */
+        choix (contador egal 3) alors {
+            affiche("Je t’avais dit : 'Ne regarde pas en arrière'");
+        } sinon si (contador egal 2) alors {
+            affiche("Le passé qui te suit te fait la guerre");
+        } sinon {
+            je_te_hais; /* Sai do loop */
+            affiche("Mais tu n’écoutes pas, tu n’écoutes pas");
+        }
+        /* Decrementa o contador */
+        contador prend contador moins 1;
+    }
+}
+
+/*testa concatenação de string, operadores lógicos e personalizados*/
+chanson teste_refrain_final(): rien {
+    /* Declaração de variáveis */
+    entier valeur1 prend 5 fois 1;
+    entier valeur2 prend 10 sur 1;
+    paroles ligne1 prend "Mais ma meilleure ennemie, ";
+    paroles ligne2 prend "c’est toi";
+
+    /* Operação matemática */
+    entier resultat prend valeur1 ajoute valeur2;
+
+    /* Lógica baseada em operadores lógicos e concatenação */
+    choix (non amour et non haine) alors {
+        affiche("Erreur : Les conditions ne sont pas remplies.");
+    } sinon si ((valeur2 egal resultat) ou (valeur1 superieur_a 10)) alors {
+        affiche("Erreur : Les conditions ne sont pas remplies.");
+    } sinon {
+        affiche(ligne1 ajoute ligne2); /* Concatenação de strings */
+        affiche("Fuis-moi, le pire, c’est toi et moi");
+        affiche(ligne1 ajoute ligne2); /* Concatenação de strings */
+        affiche("Fuis-moi, le pire, c’est toi et moi");
+    }
+}
+
+chanson teste_outro(entier iterador): entier {
+    choix (iterador moins_que 7) alors {
+        affiche("Je t’aime, je te hais, je t’aime, je te hais");
+        teste_outro(iterador ajoute 1); /* Chamada recursiva */
+    }
+}
+
+
+
+
+chanson ma_meilleure_ennemie(): rien {
+    teste_intro(); /*passou*/
+    affiche("");
+
+    teste_couplet_1(); /*passou*/
+    affiche("");
+
+    teste_pre_refrain(); /*passou*/
+    affiche("");
+
+    teste_refrain(); /*passou*/
+    affiche("");
+
+    teste_couplet_2(); /*passou*/
+    affiche("");
+
+    teste_pre_refrain_2(); /*passou*/
+    affiche("");
+
+    teste_refrain_final(); /*passou*/
+    affiche("");
+
+    teste_outro(0); /*passou*/
+    affiche("");
+}
