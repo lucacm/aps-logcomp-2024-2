@@ -10,11 +10,13 @@ O resultado é uma linguagem que vai além da tradução literal. Ela carrega um
 
 [Vídeo explicativo sobre a linguagem]()
 
-[Link da música no YouTube]()
+[Link da música no YouTube](https://www.youtube.com/watch?v=1F3OGIFnW1k)
 
-[Link da letra da música]()
+[Link da letra da música](https://genius.com/Stromae-and-pomme-ma-meilleure-ennemie-lyrics)
+
+[Link da tradução da letra da música](https://www.letras.mus.br/stromae/ma-meilleure-ennemie-feat-pomme/traducao.html)
 
 #
 ## [EBNF]()
 
-## [Exemplo de Código]()
+## [Exemplo de Código](https://github.com/lucacm/aps-logcomp-2024-2/blob/main/test.mme)
