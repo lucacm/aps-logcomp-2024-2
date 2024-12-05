@@ -10,7 +10,7 @@ O resultado é uma linguagem que vai além da tradução literal. Ela carrega um
 
 ![](https://github.com/lucacm/aps-logcomp-2024-2/blob/main/timebomb.png)
 
-[Vídeo explicativo sobre a linguagem]()
+[Vídeo explicativo sobre a linguagem](https://drive.google.com/file/d/10YThpiDaOlq5b40yW7wbkWA9v_9WyZ_U/view?usp=sharing)
 
 [Link da música no YouTube](https://www.youtube.com/watch?v=1F3OGIFnW1k)
 
