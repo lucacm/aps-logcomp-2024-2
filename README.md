@@ -11,6 +11,7 @@ O resultado é uma linguagem que vai além da tradução literal. Ela carrega um
 Escolhi a extensão do arquivo como `.mme` para representar a linguagem.
 
 ![](timebomb.png)
+_Ekko e Powder em Arcane_
 
 [Vídeo explicativo sobre a linguagem](https://drive.google.com/file/d/10YThpiDaOlq5b40yW7wbkWA9v_9WyZ_U/view?usp=sharing)
 
