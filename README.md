@@ -16,6 +16,123 @@ O resultado é uma linguagem que vai além da tradução literal. Ela carrega um
 
 [Link da tradução da letra da música](https://www.letras.mus.br/stromae/ma-meilleure-ennemie-feat-pomme/traducao.html)
 
+
+
+## Funcionalidades e Destaques
+
+### **Função Principal**
+
+A função principal de um programa em *Ma Meilleure Ennemie* deve obrigatoriamente se chamar:
+
+```
+ma_meilleure_ennemie
+```
+
+Ela é o ponto de entrada para execução do código e deve ser definida como `rien`, ou seja, sem retorno de valor.
+
+**Exemplo:**
+
+```c
+chanson ma_meilleure_ennemie(): rien {
+    affiche("Bienvenue à Ma Meilleure Ennemie!");
+}
+```
+
+#
+
+### **Mensagens de Erro**
+
+As mensagens de erro na linguagem seguem o tema francês, proporcionando um toque único. Por exemplo:
+
+- **Erro de sintaxe:** `"Ce symbole est une malédiction, il ne devrait pas exister ici."`  
+- **Identificador inválido:** `"Identifiant non valide trouvé dans le code."`  
+- **Variável não declarada:** `"Cette variable n’a pas été déclarée."`  
+
+Essas mensagens ajudam o desenvolvedor a depurar o código de forma clara e alinhada ao tema poético da linguagem.
+
+#
+
+
+
+### **Bloco `refrain`**
+
+Permite repetições fixas, como um refrão de música. Similar ao `for`.
+
+**Exemplo:**
+```c
+refrain 3 {
+    affiche("Refrain...");
+}
+```
+
+#
+
+### **`sinon si` (elseif)**
+
+Extensão do `choix`, permitindo condições intermediárias.  
+**Exemplo:**
+```c
+choix (x superieur_a y) alors {
+    affiche("x est superieur à y");
+} sinon si (x egal y) alors {
+    affiche("x est egal à y");
+} sinon {
+    affiche("x est moins que y");
+}
+```
+
+#
+
+### **`je_taime` (continue) e `je_te_hais` (break)**
+
+Controle de fluxo para loops do tipo `tant_que`.  
+**Exemplo:**
+```c
+tant_que x moins_que 10 {
+    choix (x egal 5) alors {
+        x prend x ajoute 1;
+        je_taime;
+    }
+    affiche(x);
+    x prend x ajoute 1;
+}
+```
+
+#
+
+### **Funções internas `meilleure` e `pire`**
+
+Funções internas que retornam o maior ou menor valor entre dois números.  
+**Exemplo:**
+```c
+entier max prend meilleure(10, 20);
+entier min prend pire(5, 15);
+```
+
+#
+
+### **Tipo Booleano**
+
+Tipo `sentiment` com valores `amour` (verdadeiro) e `haine` (falso). Similares ao `true` e `false`. 
+
+**Exemplo:**
+```c
+sentiment vrai prend amour;
+sentiment faux prend haine;
+```
+
+#
+
+### **Operadores Personalizados**
+
+Substituem operadores tradicionais:
+- Matemáticos: `ajoute` (`+`), `moins` (`-`), `fois` (`*`), `sur` (`/`).
+- Comparação: `egal` (`==`), `superieur_a` (`>`), `moins_que` (`<`).
+- Lógicos: `et` (`&&`), `ou` (`||`), `non` (`!`).
+
+Essas e outras substituições personalizadas foram pensadas para dar mais sentido ao tema da linguagem.
+
+
 #
 ## [EBNF](https://github.com/lucacm/aps-logcomp-2024-2/blob/main/ebnf.md)
 
