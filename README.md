@@ -131,7 +131,7 @@ Substituem operadores tradicionais:
 - Matemáticos: `ajoute` (`+`), `moins` (`-`), `fois` (`*`), `sur` (`/`).
 - Comparação: `egal` (`==`), `superieur_a` (`>`), `moins_que` (`<`).
 - Lógicos: `et` (`&&`), `ou` (`||`), `non` (`!`).
-- Tipos : `paroles` (`str`), `entier` (`int`), `rien`, (void)
+- Tipos : `paroles` (`str`), `entier` (`int`), `rien`, (`void`)
 
 Essas e outras substituições personalizadas foram pensadas para dar mais sentido ao tema da linguagem. Consultar a lista de palavras reservadas no código [main.py](main.py) para mais detalhes.
 
