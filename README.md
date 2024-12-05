@@ -19,4 +19,4 @@ O resultado é uma linguagem que vai além da tradução literal. Ela carrega um
 #
 ## [EBNF](https://github.com/lucacm/aps-logcomp-2024-2/blob/main/ebnf.md)
 
-## [Exemplo de Código](https://github.com/lucacm/aps-logcomp-2024-2/blob/main/test.mme)
+## [Exemplo de Código](https://github.com/lucacm/aps-logcomp-2024-2/blob/main/test.md)
