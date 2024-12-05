@@ -8,7 +8,7 @@ Foi então que encontrei inspiração na música **"Ma Meilleure Ennemie"**, uma
 
 O resultado é uma linguagem que vai além da tradução literal. Ela carrega um toque de poesia e personalidade, com comandos que evocam sentimentos, relações e beleza. *Ma Meilleure Ennemie* não é apenas uma linguagem para programar, mas também uma forma de expressão, combinando funcionalidade com uma estética mais falada e fluida.
 
-![](https://github.com/lucacm/aps-logcomp-2024-2/blob/main/timebomb.png)
+![](timebomb.png)
 
 [Vídeo explicativo sobre a linguagem](https://drive.google.com/file/d/10YThpiDaOlq5b40yW7wbkWA9v_9WyZ_U/view?usp=sharing)
 
@@ -131,11 +131,12 @@ Substituem operadores tradicionais:
 - Matemáticos: `ajoute` (`+`), `moins` (`-`), `fois` (`*`), `sur` (`/`).
 - Comparação: `egal` (`==`), `superieur_a` (`>`), `moins_que` (`<`).
 - Lógicos: `et` (`&&`), `ou` (`||`), `non` (`!`).
+- Tipos : `paroles` (`str`), `entier` (`int`), `rien`, (void)
 
-Essas e outras substituições personalizadas foram pensadas para dar mais sentido ao tema da linguagem.
+Essas e outras substituições personalizadas foram pensadas para dar mais sentido ao tema da linguagem. Consultar a lista de palavras reservadas no código [main.py](main.py) para mais detalhes.
 
 
 #
-## [EBNF](https://github.com/lucacm/aps-logcomp-2024-2/blob/main/ebnf.md)
+## [EBNF](ebnf.md)
 
-## [Exemplo de Código](https://github.com/lucacm/aps-logcomp-2024-2/blob/main/test.md)
+## [Exemplo de Código](test.md)
