@@ -18,8 +18,6 @@
             | "affiche" "(" <expressao> ")" ";"
             | "demande" "(" <identificador> ")" ";"
             | "retourne" <expressao> ";"
-            | "je_taime" ";"
-            | "je_te_hais" ";"
             | <chamada_funcao> ";"
 
 <declaracao_variavel> ::= <tipo> <identificador> [ "prend" <expressao> ] { "," <identificador> [ "prend" <expressao> ] }
@@ -29,7 +27,10 @@
                 [ "sinon si" "(" <relative_expression> ")" "alors" "{" <bloco_comandos> "}" ] 
                 [ "sinon" "{" <bloco_comandos> "}" ]
 
-<loop> ::= "tant_que" <relative_expression> "{" <bloco_comandos> "}"
+<loop> ::= <tant_que>
+<tant_que> ::= "tant_que" <relative_expression> "{" <bloco_comandos_loop> "}"
+<bloco_comandos_loop> ::= { <comando> | "je_taime" ";" | "je_te_hais" ";" }
+
 <refrain> ::= "refrain" <numero> "{" <bloco_comandos> "}"
 
 <chamada_funcao_principal> ::= <chamada_funcao> ";"
@@ -56,4 +57,5 @@
 <caractere> ::= qualquer símbolo ASCII, exceto aspas duplas (")
 <digito> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 <letra> ::= qualquer letra (a-z ou A-Z)
+
 ```
